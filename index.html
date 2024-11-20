@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header class="flex justify-between p-4 items-center">
+
+
+
+    <div class="flex justify-between gap-10">
+      <div>
+        <img src="/images/logo.svg" alt="" height="21">
+      </div>
+      <ul class="flex justify-between gap-10 max-mobile:hidden">
+        <li class=""><h1 class="hover:text-almost-black text-medium-gray cursor-pointer after:content-iconDown after:pl-2 text-start pb-1">Features</h1>
+          <ul class="flex flex-col hidden features border-2 shadow-custom p-3 text-sm gap-3 rounded-xl">
+            <li class="flex gap-3 cursor-pointer"><img src="/images/icon-todo.svg " alt="">Todo List</li>
+            <li class="flex gap-3 cursor-pointer"><img src="/images/icon-calendar.svg" alt="">Calendar</li>
+            <li class="flex gap-3 cursor-pointer"><img src="/images/icon-reminders.svg" alt="">Reminders</li>
+            <li class="flex gap-3 cursor-pointer"><img src="/images/icon-planning.svg" alt="">Planning</li>
+          </ul>
+        </li>
+        <li class=""><h1 class="hover:text-almost-black text-medium-gray cursor-pointer after:content-iconDown after:pl-2 text-start pb-1">Company</h1>
+            <ul class="flex flex-col hidden company border-2 shadow-custom p-3 text-sm gap-3 rounded-xl">
+              <li class="flex gap-3 cursor-pointer">History</li>
+              <li class="flex gap-3 cursor-pointer">Our Team</li>
+              <li class="flex gap-3 cursor-pointer">Blog</li>
+            </ul>
+        </li>
+      </ul>
+      <h3 class="cursor-pointer text-medium-gray hover:text-almost-black max-mobile:hidden">Careers</h3>
+      <h3 class="cursor-pointer text-medium-gray hover:text-almost-black max-mobile:hidden">About</h3>
+    </div>
+    <div class="pr-20 flex gap-7">
+      <button class="max-mobile:hidden">Login</button>
+      <button class="border px-6 py-2 rounded-xl border-black max-mobile:hidden">Register</button>
+    </div>
+
+
+
+    <div class="mobile hidden">
+      <button class="menu"><img src="/images/icon-menu.svg" alt=""></button>
+    </div>
+    <div class="mobile-lists absolute bg-white h-full w-1/2 top-0 right-0 p-6 hidden">
+      <button class="exit pl-28"><img src="/images/icon-close-menu.svg" alt=""></button>
+      <ul class="flex justify-between flex-col z-30 max-mobile:">
+        <li class=""><h1 class="hover:text-almost-black text-medium-gray cursor-pointer after:content-iconDown after:pl-2 text-start pb-2">Features</h1>
+          <ul class="hidden flex flex-col features2 text-sm gap-3 rounded-xl">
+            <li class="flex gap-3 pl-4 pt-3 cursor-pointer"><img src="/images/icon-todo.svg " alt="">Todo List</li>
+            <li class="flex gap-3 pl-4 cursor-pointer"><img src="/images/icon-calendar.svg" alt="">Calendar</li>
+            <li class="flex gap-3 pl-4 cursor-pointer"><img src="/images/icon-reminders.svg" alt="">Reminders</li>
+            <li class="flex gap-3 pl-4 pb-4 cursor-pointer"><img src="/images/icon-planning.svg" alt="">Planning</li>
+          </ul>
+        </li>
+        <li class=""><h1 class="hover:text-almost-black text-medium-gray cursor-pointer after:content-iconDown after:pl-2 text-start pb-2">Company</h1>
+            <ul class="hidden flex flex-col company2 p-3 text-sm gap-3 rounded-xl">
+              <li class="flex gap-3 pl-2 cursor-pointer">History</li>
+              <li class="flex gap-3 pl-2 cursor-pointer">Our Team</li>
+              <li class="flex gap-3 pl-2 pb-4 cursor-pointer">Blog</li>
+            </ul>
+        </li>
+      </ul>
+      <div class="overlay fixed top-0 left-0 w-1/2 h-full bg-overlay z-20 hidden"></div>
+      <h3 class="pb-2 cursor-pointer text-medium-gray hover:text-almost-black">Careers</h3>
+      <h3 class="pb-2 cursor-pointer text-medium-gray hover:text-almost-black">About</h3>
+      <div class="text-center flex flex-col gap-5">
+        <button class="pt-6">Login</button>
+        <button class="border px-6 py-2 rounded-xl border-black">Register</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex justify-center pt-14 gap-40 z-10 max-mobile:gap-0 max-mobile:flex-col-reverse max-mobile:z-10">
+    <div class="flex flex-col justify-between">
+      <div class="max-w-3xl">
+        <h1 class="text-7xl font-bold pb-16 pt-24 max-mobile:text-3xl max-mobile:px-4 max-mobile:py-6 max-mobile:text-center">Make remote work</h1>
+
+        <p class="pb-16 text-medium-gray max-mobile:text-center max-mobile:text-sm max-mobile:p-2 max-mobile:pb-4">Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.</p>
+        <div class="max-mobile:flex justify-center">
+          <button class="hover:bg-white hover:text-black hover:border-black bg-almost-black border-2 text-white py-4 px-8 rounded-2xl font-semibold">Learn more</button>
+        </div>
+      </div>
+      <div class="flex gap-10 max-mobile: pt-16">
+        <div>
+          <img src="/images/client-databiz.svg" alt="" height="20">
+        </div>
+        <div>
+          <img src="/images/client-audiophile.svg" alt="" height="36">
+        </div>
+        <div>
+          <img src="/images/client-meet.svg" alt="" height="20">
+        </div>
+        <div>
+          <img src="/images/client-maker.svg" alt="" height="24">
+        </div>
+      </div>
+    </div>
+    <div>
+      <img class="max-mobile:hidden" src="/images/image-hero-desktop.png" alt="" width="500">
+    </div>
+    <div>
+      <img class="min-mobile:hidden md:hidden" src="/images/image-hero-mobile.png" alt="" width="500">
+    </div>
+  </div>
+<script src="./script.js"></script>
+</body>
+</html>
